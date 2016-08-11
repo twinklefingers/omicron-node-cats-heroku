@@ -5,7 +5,7 @@ $(document).ready(function() {
   function loadCats() {
     $.ajax({
       type: 'GET',
-      url: '/cats',
+      url: '/felines',
       success: function(response) {
         $("#cat-list").empty();
         response.forEach(function(cat) {
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
     $.ajax({
       type: 'POST',
-      url: '/cats',
+      url: '/kitties',
       data: cat,
       success: function(data) {
         console.log('post request successful!');
